@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remote Interview Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>InterviewHub</h2>
+
+      <a class="active" onclick="showPage('dashboard')">Dashboard</a>
+      <a onclick="showPage('jobs')">Jobs</a>
+      <a onclick="showPage('candidates')">Candidates</a>
+      <a onclick="showPage('interviews')">Interviews</a>
+      <a onclick="showPage('applications')">Applications</a>
+      <a onclick="showPage('calendar')">Calendar</a>
+      <a onclick="showPage('messages')">Messages</a>
+      <a onclick="showPage('reports')">Reports</a>
+      <a onclick="showPage('settings')">Settings</a>
+
+      <button onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <header>
+        <h1 id="pageTitle">Dashboard</h1>
+        <span>Welcome 👋</span>
+      </header>
+
+      <!-- Dashboard -->
+      <section id="dashboard" class="page">
+        <div class="cards">
+          <div class="card">
+            <h3>24</h3>
+            <p>Total Jobs</p>
+          </div>
+          <div class="card">
+            <h3>128</h3>
+            <p>Candidates</p>
+          </div>
+          <div class="card">
+            <h3>18</h3>
+            <p>Interviews</p>
+          </div>
+          <div class="card">
+            <h3>42</h3>
+            <p>Applications</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2>Upcoming Interviews</h2>
+          <table>
+            <tr>
+              <th>Candidate</th>
+              <th>Position</th>
+              <th>Date</th>
+            </tr>
+            <tr>
+              <td>Rahul</td>
+              <td>Software Developer</td>
+              <td>10 Oct 2026</td>
+            </tr>
+            <tr>
+              <td>Ananya</td>
+              <td>UI Designer</td>
+              <td>11 Oct 2026</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- Jobs -->
+      <section id="jobs" class="page hidden">
+        <button class="primary" onclick="addJob()">+ Add Job</button>
+        <div class="box">
+          <h2>Available Jobs</h2>
+          <p>Software Developer</p>
+          <p>UI/UX Designer</p>
+          <p>Data Analyst</p>
+          <p>Frontend Developer</p>
+        </div>
+      </section>
+
+      <!-- Candidates -->
+      <section id="candidates" class="page hidden">
+        <button class="primary" onclick="addCandidate()">+ Add Candidate</button>
+        <div class="box">
+          <h2>Candidates</h2>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Position</th>
+            </tr>
+            <tr>
+              <td>Rahul Kumar</td>
+              <td>rahul@gmail.com</td>
+              <td>Developer</td>
+            </tr>
+            <tr>
+              <td>Ananya Sharma</td>
+              <td>ananya@gmail.com</td>
+              <td>Designer</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- Interviews -->
+      <section id="interviews" class="page hidden">
+        <button class="primary" onclick="scheduleInterview()">+ Schedule Interview</button>
+        <div class="box">
+          <h2>Scheduled Interviews</h2>
+          <p>Rahul Kumar - Software Developer - 10 Oct</p>
+          <p>Ananya Sharma - UI Designer - 11 Oct</p>
+        </div>
+      </section>
+
+      <!-- Applications -->
+      <section id="applications" class="page hidden">
+        <div class="box">
+          <h2>Applications</h2>
+          <p>Rahul Kumar - Shortlisted</p>
+          <p>Ananya Sharma - Interview Scheduled</p>
+          <p>Arjun Patel - Under Review</p>
+        </div>
+      </section>
+
+      <!-- Calendar -->
+      <section id="calendar" class="page hidden">
+        <div class="box">
+          <h2>Interview Calendar</h2>
+          <input type="date">
+        </div>
+      </section>
+
+      <!-- Messages -->
+      <section id="messages" class="page hidden">
+        <div class="box">
+          <h2>Messages</h2>
+          <p>📩 Rahul: Thank you for the interview opportunity.</p>
+          <p>📩 Ananya: Looking forward to the interview.</p>
+        </div>
+      </section>
+
+      <!-- Reports -->
+      <section id="reports" class="page hidden">
+        <div class="cards">
+          <div class="card">
+            <h3>85%</h3>
+            <p>Hiring Success</p>
+          </div>
+          <div class="card">
+            <h3>72%</h3>
+            <p>Interview Success</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Settings -->
+      <section id="settings" class="page hidden">
+        <div class="box">
+          <h2>Settings</h2>
+          <label>Username</label>
+          <input type="text" value="Admin">
+
+          <label>Email</label>
+          <input type="email" value="admin@gmail.com">
+
+          <button class="primary">Save Changes</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #222;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  background: #172554;
+  color: white;
+  padding: 25px 15px;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 13px;
+  margin: 5px 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #2563eb;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 30px;
+  background: #ef4444;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.main {
+  margin-left: 230px;
+  width: calc(100% - 230px);
+  padding: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ddd;
+}
+
+.card h3 {
+  font-size: 28px;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.box {
+  background: white;
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ddd;
+}
+
+.box p {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 13px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .main {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
